@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import { Link } from "react-router-dom";
 import './App.css';
 
 function App() {
@@ -12,14 +13,13 @@ function handleLogin() {
   const codeId = document.getElementById("codeId").value;
   const password = document.getElementById("password").value;
   const remember = document.getElementById("remember").checked;
-  document.writeln("Logging in with:", { codeId, password, remember });
+  console.log("Logging in with:", { codeId, password, remember });
   alert("Welcome"+ codeId +"")
 }
        
   return (
     <div className="App">
       <head>
- 
       </head>
       <header className="App-header">
      
@@ -110,10 +110,10 @@ function handleLogin() {
   >
     Login
   </button>
+  <Link to="/FileManager">Dashborad</Link>
+   <Link to="/SignUpForm">Sign-up</Link>
 </div>
-
-
-      </main>
+</main>
     </div>
     
   );
